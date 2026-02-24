@@ -66,7 +66,12 @@ const Home = () => {
               Upload a contract and get instant AI-powered analysis
             </span>
           </h2>
-          
+
+          {/* 🔹 NEW: visible demo badge */}
+          <div className="inline-block mb-6 rounded-full bg-blue-50 px-3 py-1 text-sm text-blue-600">
+            Powered by AI (Demo)
+          </div>
+
           <div className="flex justify-center space-x-8 mt-8 mb-12">
             <div className="flex items-center space-x-2 text-muted-foreground">
               <FileText className="h-5 w-5 text-accent" />
@@ -86,7 +91,7 @@ const Home = () => {
         {/* Upload Section */}
         <div className="max-w-2xl mx-auto">
           <FileUpload onFileSelect={handleFileUpload} />
-          
+
           {/* Legal Disclaimer */}
           <Card className="mt-8 p-4 bg-muted/50 border-warning/20">
             <div className="flex items-start space-x-3">
@@ -110,7 +115,7 @@ const Home = () => {
               AI breaks down complex legal language into plain English explanations
             </p>
           </Card>
-          
+
           <Card className="p-6 text-center bg-gradient-card border-0 shadow-card hover:shadow-hover transition-all duration-300">
             <div className="bg-warning/10 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
               <Shield className="h-6 w-6 text-warning" />
@@ -120,7 +125,7 @@ const Home = () => {
               Automatically identifies potentially risky clauses and terms
             </p>
           </Card>
-          
+
           <Card className="p-6 text-center bg-gradient-card border-0 shadow-card hover:shadow-hover transition-all duration-300">
             <div className="bg-success/10 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
               <MessageSquare className="h-6 w-6 text-success" />
@@ -134,15 +139,15 @@ const Home = () => {
       </main>
 
       {/* Processing Modal */}
-      <ProcessingModal 
-        isOpen={isProcessing} 
+      <ProcessingModal
+        isOpen={isProcessing}
         progress={processingProgress}
         onClose={() => setIsProcessing(false)}
       />
-      
+
       {/* Sign In Modal */}
-      <SignInModal 
-        isOpen={showSignIn} 
+      <SignInModal
+        isOpen={showSignIn}
         onClose={() => setShowSignIn(false)}
       />
     </div>
