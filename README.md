@@ -1,36 +1,77 @@
-# ⚖️ LegalSimplify  
+# ⚖️ LegalSimplify
 
-**LegalSimplify** is an AI-powered web app that helps users instantly understand and interact with legal documents in plain, human language.
-
----
-
-## 🌍 Live Demo  
-👉 [View LegalSimplify in action](https://legalsimplify.netlify.app/)  
+LegalSimplify is a web application that helps users understand legal documents in simpler, more readable language.  
+The project focuses on frontend structure, user experience, and integrating AI-powered services to make complex legal text easier to explore and interpret.
 
 ---
 
-## ✨ Key Features  
-- 📂 Upload **legal PDFs or scanned images** (e.g. contracts, agreements)  
-- 📝 **Clear summarization** in plain English powered by **Google Document AI**  
-- ⚠️ **Risk detection**: highlights & explains clauses that are important or potentially risky  
-- 💬 **Interactive Q&A chat**: users ask questions and get answers with **exact clause citations**, enabled by **GCP Vector Search** (semantic retrieval)  
-- 🖥️ **Access anywhere**: easily view via any device, hosted on **Netlify**  
+## 🌐 Live Demo
+👉 View LegalSimplify in action
+  https://legalsimplify.netlify.app/
+---
+
+## ✨ Key Features
+
+- Upload legal PDFs or scanned documents (e.g., contracts, agreements)
+- Generate plain-English summaries of legal content
+- Highlight important or potentially risky sections in documents
+- Ask questions about the document through a simple Q&A interface
+- Responsive, browser-based UI accessible across devices
 
 ---
 
-## 🛠️ Tech Stack  
-- **Frontend**: [Vite](https://vitejs.dev) + [TypeScript](https://www.typescriptlang.org/) + [Tailwind CSS](https://tailwindcss.com)  
-- **AI / Cloud Services**:  
-  - [Google Document AI](https://cloud.google.com/document-ai) for parsing and extraction :contentReference[oaicite:0]{index=0}  
-  - [Vertex AI Matching Engine / GCP Vector Search](https://cloud.google.com/vertex-ai/docs/matching-engine/overview) for semantic Q&A  
-- **Deployment**: Hosted on **Netlify** for fast, global access :contentReference[oaicite:1]{index=1}  
+## 🛠️ Tech Stack
+
+### Frontend
+- React (Vite)
+- TypeScript
+- Tailwind CSS
+
+### AI / Cloud Integration
+- AI-based document processing APIs for text extraction and summarization
+- Semantic search concepts used for document-based Q&A
+
+### Deployment
+- Netlify
 
 ---
 
-## 🚀 Getting Started Locally  
+## 📁 Project Structure
+
+The project follows a component-driven structure:
+
+- `src/` contains the core application logic
+- Reusable UI components are organized separately for clarity
+- Configuration and constants are centralized to keep the codebase maintainable
+
+This structure helps keep the application scalable and easier to reason about as features grow.
+
+---
+
+## 🎯 Learning Focus
+
+This project was built as a learning-oriented application with emphasis on:
+
+- Structuring a frontend application using React and TypeScript
+- Designing clean and readable UI flows for complex content
+- Integrating external AI services into a web interface
+- Handling loading states and improving overall user experience
+- Understanding trade-offs when working with third-party APIs
+
+---
+
+## ⚠️ Limitations
+
+- The accuracy of summaries depends on the quality and clarity of uploaded documents
+- The application is not intended to provide legal advice
+- Advanced legal validation and compliance checks are out of scope
+
+---
+
+## 🚀 Getting Started Locally
+
 ```bash
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/aditya32142/doc-explain-hub.git
+cd doc-explain-hub
 npm install
-npm run dev       # start dev server
-npm run build     # create production build
+npm run dev
